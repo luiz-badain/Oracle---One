@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+            document.write("<br>");
+            document.write("<br>");
+
+        }
+
+        function mostra(frase){
+            document.write(frase);
+            pulaLinha();
+        }
+
+        function calculaIMC(altura,peso){
+            return peso / (altura * altura);
+            
+  
+        }
+        var nome = prompt("informe o seu nome");
+        var alturaInformada = prompt(nome +", informe sua altura");
+        var pesoInformado = prompt(nome +", infome sue peso");
+
+        var imc = calculaIMC(alturaInformada, pesoInformado);
+
+        mostra(nome+", o seu IMC calculado é " + imc);
+        
+        if(imc <18.5){
+            mostra("você está abaixo do recomendado");
+        }
+        if (imc >35){
+            mostra("voce está acima da média");
+        }
+        if(imc >=18.5 && imc <=35){
+                mostra("Seu IMC está excelente!");
+            
+
+        }
+    </script>
+</body>
+</html>
